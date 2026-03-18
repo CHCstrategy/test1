@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Australia Capital Growth Suburb Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Property research assistant</p>
+        <h1>Find 10 Australian suburbs with strong capital growth potential.</h1>
+        <p class="hero-copy">
+          Type your investment preferences into the chat box. The app analyses your prompt and responds with
+          ten suburb ideas, their state, a quick reason, and the growth drivers to watch.
+        </p>
+      </section>
+
+      <section class="chat-card" aria-label="Capital growth chat application">
+        <div class="chat-header">
+          <div>
+            <h2>Capital Growth Chat</h2>
+            <p>Ask about budget, state, yield, infrastructure, or family-friendly locations.</p>
+          </div>
+          <span class="status-pill">Ready</span>
+        </div>
+
+        <div id="chatMessages" class="chat-messages" aria-live="polite">
+          <article class="message assistant">
+            <p class="message-label">Suburb Scout</p>
+            <div class="message-bubble">
+              <p>
+                Hello! Ask me for the top 10 suburbs in Australia for capital growth. You can mention a state,
+                budget, lifestyle, or investment strategy.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <label class="sr-only" for="userPrompt">Describe the type of suburbs you want</label>
+          <textarea
+            id="userPrompt"
+            name="userPrompt"
+            rows="3"
+            placeholder="Example: Show me 10 suburbs with strong capital growth potential in Queensland under $900k"
+            required
+          ></textarea>
+          <div class="chat-actions">
+            <p class="hint">Tip: try keywords like Queensland, family, under 1m, coastal, yield, or infrastructure.</p>
+            <button type="submit">Generate top 10 suburbs</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
